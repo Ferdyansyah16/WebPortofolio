@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Ferdyansyah Zaelani</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="preloader" id="preloader">
+        <div class="loader-text">
+            <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <span>&lt;</span>Portofolio<span>/&gt;</span>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="home" class="hero-section">
+        <div class="particles" id="particles"></div>
+        
+        <div class="hero-container full-width-hero">
+            <div class="hero-text scroll-anim">
+                <p class="greeting">Halo 👋, Saya</p>
+                <h1 class="name"><span class="typed-text"></span><span class="cursor">|</span></h1>
+                <h2 class="tagline">Mahasiswa Informatika & Web Developer</h2>
+                <p class="description">
+                    Membuat solusi digital yang elegan, inovatif, dan berdampak. 
+                    Mari kita ciptakan sesuatu yang luar biasa bersama!
+                </p>
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> Lihat Karya
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Hubungi Saya
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="mouse-scroll"></div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header scroll-anim">
+                <h2 class="section-title">Tentang Saya</h2>
+                <p class="section-subtitle">Kenali lebih dekat</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image scroll-anim">
+                    <div class="image-wrapper">
+                        <div class="image-frame"></div>
+                        <img src="assets/profil.jpeg" alt="Foto Profil" >
+                    </div>
+                    <div class="image-decoration"></div>
+                </div>
+                <div class="about-text scroll-anim">
+                    <h3>Hai, Saya <span class="highlight">Ferdyansyah Zaelani</span></h3>
+                    <p class="lead">
+                        Seorang mahasiswa Sistem Informasi yang passionate dalam pembuatan website modern dan pengalaman pengguna yang luar biasa.
+                    </p>
+                    <p>
+                        Saya percaya bahwa teknologi harus membuat hidup lebih mudah dan indah. Dengan kombinasi kreativitas dan logika pemrograman, saya siap menciptakan solusi digital yang membantu banyak orang.
+                    </p>
+                    <p>
+                        Saat ini saya sedang mendalami <strong>Web Development</strong> (HTML, CSS, JavaScript), <strong>React</strong>, dan <strong>Python</strong>. Saya terbuka untuk kolaborasi dan proyek menarik!
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="number" data-target="5">0</span>
+                            <span class="label">Proyek Selesai</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" data-target="2">0</span>
+                            <span class="label">Tahun Studi</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number" data-target="10">0</span>
+                            <span class="label">Sertifikat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <div class="section-header scroll-anim">
+                <h2 class="section-title">Kemampuan</h2>
+                <p class="section-subtitle">Teknologi yang saya gunakan</p>
+            </div>
+            
+            <div class="skills-grid-container scroll-anim">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name"><i class="fab fa-html5 text-orange"></i> HTML</span>
+                        <span class="skill-level text-orange">Medium</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-fill bg-orange" data-width="77%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name"><i class="fab fa-css3-alt text-yellow"></i> CSS</span>
+                        <span class="skill-level text-blue">Medium</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-fill bg-blue" data-width="70%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name"><i class="fab fa-js text-yellow"></i> JavaScript</span>
+                        <span class="skill-level text-yellow">Medium</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-fill bg-yellow" data-width="70%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name"><i class="fab fa-python text-cyan"></i> Python</span>
+                        <span class="skill-level text-cyan">Beginner</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-fill bg-cyan" data-width="40%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name"><i class="fab fa-mysql text-yellow"></i> MySQL</span>
+                        <span class="skill-level text-red">Medium</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-fill bg-red" data-width="70%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name"><i class="fas fa-palette text-purple"></i> UI/UX Design</span>
+                        <span class="skill-level text-purple">Medium</span>
+                    </div>
+                    <div class="skill-bar-bg">
+                        <div class="skill-fill bg-purple" data-width="65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header scroll-anim">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Kumpulan proyek terbaik saya</p>
+            </div>
+            
+            <div class="portfolio-grid scroll-anim">
+                <div class="portfolio-item">
+                    <div class="portfolio-img-box">
+                        <img src="assets/foto1.png" alt="Proyek 1">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Website E-Commerce</h3>
+                        <p>Desain platform toko online responsif dengan sistem keranjang belanja interaktif.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img-box">
+                        <img src="assets/foto2.png" alt="Proyek 2">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Panel admin interaktif untuk visualisasi grafik data penjualan real-time.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img-box">
+                        <img src="assets/foto3.png" alt="Proyek 3">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Aplikasi Manajemen Tugas</h3>
+                        <p>Aplikasi to-do list dengan sistem drag-and-drop dan penyimpanan data lokal.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img-box">
+                        <img src="assets/foto4.png" alt="Proyek 4">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Landing Page Portfolio</h3>
+                        <p>Desain website portofolio personal premium dengan optimasi SEO tingkat lanjut.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img-box">
+                        <img src="assets/foto5.jpeg" alt="Proyek 5">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Aplikasi SIMRS</h3>
+                        <p>Sistem informasi manajemen rumah sakit dengan fitur permintaan perubahaan data pasien untuk perawat dan admin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-alt">
+        <div class="container">
+            <div class="section-header scroll-anim">
+                <h2 class="section-title">Kontak Saya</h2>
+                <p class="section-subtitle">Mari terhubung dan berdiskusi</p>
+            </div>
+            
+            <div class="contact-wrapper scroll-anim">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>emailanda@student.univ.ac.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Lokasi</h4>
+                            <p>Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder="Nama Lengkap">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" required placeholder="Subjek">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required placeholder="Pesan Anda"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span class="btn-text">Kirim Pesan <i class="fas fa-paper-plane"></i></span>
+                            <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i></span>
+                        </button>
+                    </form>
+                    
+                    <div class="success-message" id="successMessage">
+                        <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                        <h3>Pesan Terkirim! ✅</h3>
+                        <p>Terima kasih telah menghubungi saya. Saya akan merespons seringkas mungkin.</p>
+                        <button type="button" class="btn btn-outline" onclick="resetForm()">Kirim Pesan Lainnya</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="wave-separator">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio=\"none\">
+            <path d="M321,39c6-3.7,14.2-4.8,22-3.7s15.6,3.9,23.2,6.6,16.7,5.3,24,9,15.5,8.6,23,15c7.2,6.2,13.8,13.3,18.3,22.2s6.3,18.8,3.7,29.3v30H0V0H1200V120H321Z" class="wave-path"></path>
+        </svg>
+    </div> -->
+
+    <footer>
+        <p>&copy; 2026 Ferdyansyah Zaelani. Tugas Pemrograman Web 1.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
