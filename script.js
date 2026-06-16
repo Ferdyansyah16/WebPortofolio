@@ -20,11 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         html.setAttribute('data-theme', isDark ? 'dark' : 'light');
         themeBtn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         
-        // Simpan preferensi pengguna
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 
-    // Muat tema yang tersimpan
     if (localStorage.getItem('theme') === 'dark') {
         isDark = true;
         html.setAttribute('data-theme', 'dark');
@@ -98,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollElements.forEach(el => observer.observe(el));
 
-    // === 7. ANIMATED COUNTER (Number Count Up) ===
+    // === 7. ANIMATED COUNTER ===
     const counters = document.querySelectorAll('.number[data-target]');
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -144,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // === 9. TYPED TEXT EFFECT ===
     const typedText = document.querySelector('.typed-text');
     if (typedText) {
-        const texts = ['Web Developer', 'Mahasiswa IT', 'UI/UX Designer', 'Tech Enthusiast'];
+        const texts = ['Web Developer', 'Mahasiswa IT', 'UI/UX Designer', 'IT Support'];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -192,27 +190,53 @@ const contactForm = document.getElementById('contactForm');
 const successMessage = document.getElementById('successMessage');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Mencegah halaman reload otomatis
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        const submitBtn = contactForm.querySelector('.btn-submit');
-        
-        // Aktifkan animasi loading pada tombol
-        submitBtn.classList.add('loading');
-        
-        // Simulasi pengiriman data selama 1.5 detik
-        setTimeout(() => {
-            // Matikan animasi loading setelah selesai
-            submitBtn.classList.remove('loading');
-            
-            // Sembunyikan form kontak dan munculkan pesan sukses
+        const submitBtn = this.querySelector('.btn-submit');
+        if (submitBtn) {
+            submitBtn.classList.add('loading');
+        }
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+
+        const myEmail = "ferdyzaelani16@gmail.com"; 
+
+        fetch(`https://formsubmit.co/ajax/${myEmail}`, {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+           
+            if (submitBtn) submitBtn.classList.remove('loading');
             contactForm.style.display = 'none';
-            successMessage.classList.add('active');
-        }, 1500);
+            if (successMessage) successMessage.classList.add('active');
+        })
+        .catch(error => {
+           
+            console.log(error);
+            if (submitBtn) submitBtn.classList.remove('loading');
+            alert("Maaf, terjadi kesalahan. Pesan gagal dikirim.");
+        });
     });
 }
 
-// Fungsi untuk mereset dan menampilkan kembali form jika user ingin mengirim pesan lagi
+function resetForm() {
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    if (contactForm && successMessage) {
+        contactForm.reset();
+        contactForm.style.display = 'block';
+        successMessage.classList.remove('active');
+    }
+}
+
 function resetForm() {
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
