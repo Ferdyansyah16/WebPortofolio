@@ -281,24 +281,28 @@
                 </div>
                 
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" required placeholder="Nama Lengkap">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" required placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" required placeholder="Subjek">
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="5" required placeholder="Pesan Anda"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <span class="btn-text">Kirim Pesan <i class="fas fa-paper-plane"></i></span>
-                            <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i></span>
-                        </button>
-                    </form>
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/ferdyzaelani16@gmail.com" method="POST">
+    <div class="form-group">
+        <!-- Ditambahkan name="Name" -->
+        <input type="text" id="name" name="Name" required placeholder="Nama Lengkap">
+    </div>
+    <div class="form-group">
+        <!-- Ditambahkan name="Email" -->
+        <input type="email" id="email" name="Email" required placeholder="Email">
+    </div>
+    <div class="form-group">
+        <!-- Ditambahkan name="Subject" -->
+        <input type="text" id="subject" name="Subject" required placeholder="Subjek">
+    </div>
+    <div class="form-group">
+        <!-- Ditambahkan name="Message" -->
+        <textarea id="message" name="Message" rows="5" required placeholder="Pesan Anda"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-submit">
+        <span class="btn-text">Kirim Pesan <i class="fas fa-paper-plane"></i></span>
+        <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i></span>
+    </button>
+</form>
                     
                     <div class="success-message" id="successMessage">
                         <div class="success-icon"><i class="fas fa-check-circle"></i></div>
