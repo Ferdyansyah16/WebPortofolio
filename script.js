@@ -198,11 +198,13 @@ if (contactForm) {
             submitBtn.classList.add('loading');
         }
 
+        // Mengambil data dari form HTML
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
 
         const myEmail = "ferdyzaelani16@gmail.com"; 
 
+        // Mengirimkan data via AJAX JSON ke FormSubmit
         fetch(`https://formsubmit.co/ajax/${myEmail}`, {
             method: "POST",
             headers: { 
@@ -213,28 +215,16 @@ if (contactForm) {
         })
         .then(response => response.json())
         .then(data => {
-           
             if (submitBtn) submitBtn.classList.remove('loading');
             contactForm.style.display = 'none';
             if (successMessage) successMessage.classList.add('active');
         })
         .catch(error => {
-           
-            console.log(error);
+            console.error("Error:", error);
             if (submitBtn) submitBtn.classList.remove('loading');
             alert("Maaf, terjadi kesalahan. Pesan gagal dikirim.");
         });
     });
-}
-
-function resetForm() {
-    const contactForm = document.getElementById('contactForm');
-    const successMessage = document.getElementById('successMessage');
-    if (contactForm && successMessage) {
-        contactForm.reset();
-        contactForm.style.display = 'block';
-        successMessage.classList.remove('active');
-    }
 }
 
 function resetForm() {
